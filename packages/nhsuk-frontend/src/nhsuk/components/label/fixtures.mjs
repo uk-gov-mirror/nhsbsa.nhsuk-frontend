@@ -79,6 +79,20 @@ const fixtures = {
     },
     callBlock: "What is your full name?"
   },
+  "with heading level 1": {
+    context: {
+      text: "What is your full name?",
+      size: "l",
+      headingLevel: 1
+    }
+  },
+  "with heading level 2": {
+    context: {
+      text: "What is your full name?",
+      size: "m",
+      headingLevel: 2
+    }
+  },
   "without page heading": {
     context: {
       text: "What is your full name?"
