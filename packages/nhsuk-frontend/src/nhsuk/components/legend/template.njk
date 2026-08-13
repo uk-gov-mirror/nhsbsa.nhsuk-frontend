@@ -34,10 +34,11 @@
 {% endset -%}
 
 <legend {{- nhsukAttributes({ class: classNames }) }}>
-{% if params.isPageHeading %}
+{% if params.isPageHeading or params.headingLevel %}
   {{ heading({
     html: innerHtml,
-    className: classNamesHeading
+    className: classNamesHeading,
+    level: params.headingLevel
   }) | trim | indent(2) }}
 {% else %}
   {{ innerHtml | safe | trim | indent(2) }}

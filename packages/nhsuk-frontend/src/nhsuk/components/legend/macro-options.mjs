@@ -44,6 +44,12 @@ const options = {
     required: false,
     description: 'Size of the legend – `"s"`, `"m"`, `"l"` or `"xl"`.',
     released: '10.2.0'
+  },
+  headingLevel: {
+    type: 'integer',
+    required: false,
+    description: 'Optional legend heading level. Defaults to `1`.',
+    released: '10.6.0'
   }
 }
 
