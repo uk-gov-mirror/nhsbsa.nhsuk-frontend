@@ -52,6 +52,12 @@ const options = {
     description: 'Size of the label – `"s"`, `"m"`, `"l"` or `"xl"`.',
     released: '10.2.0'
   },
+  level: {
+    type: 'integer',
+    required: false,
+    description: 'Optional label heading level. Defaults to `1`.',
+    released: '10.6.0'
+  },
   classes: {
     type: 'string',
     required: false,

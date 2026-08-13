@@ -49,9 +49,10 @@
 {% endif %}
 {% endset -%}
 
-{% if params.isPageHeading %}
+{% if params.isPageHeading or params.headingLevel %}
 {% call heading({
-  className: classNamesHeading
+  className: classNamesHeading,
+  level: params.headingLevel
 }) %}
   <label {{- attributesHtml | safe }}>
     {{ innerHtml | safe | trim | indent(4) }}
