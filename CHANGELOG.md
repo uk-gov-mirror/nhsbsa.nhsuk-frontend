@@ -370,6 +370,28 @@ For example, when no other nested options are necessary:
 
 This was added in [pull request #2047: Review Nunjucks options for headings and ARIA labels](https://github.com/nhsuk/nhsuk-frontend/pull/2047).
 
+#### Set the heading level for labels and legends
+
+The Nunjucks option `isPageHeading` sets whether the label or legend also acts as the heading for the page.
+
+We've added a new heading `level` Nunjucks option as a replacement for `isPageHeading` when a custom heading level is necessary, for example when a label or legend acts as the heading for a landmark:
+
+```patch
+<aside>
+  {{ input({
+    label: {
+      text: "Search",
+-     isPageHeading: true
++     headingLevel: 2
+    }
+  }) }}
+
+  <!-- // … -->
+</aside>
+```
+
+This was added in [pull request #1670: Add label and legend heading `level` option](https://github.com/nhsuk/nhsuk-frontend/pull/1670).
+
 #### Show or hide content in supported browsers
 
 You can now show or hide content depending on whether NHS.UK frontend JavaScript is supported:
